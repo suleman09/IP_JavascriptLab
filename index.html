@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+body {
+  background: linear-gradient(180.2deg, rgb(255,255, 194) -6.9%, rgb(35, 9, 31) 76.7%);
+}
+
+h1.font1 {
+    font-family: font-family: "Gill Sans", sans-serif;;
+    font-size: 60px;
+}
+
+h2.type {
+    font-family: font-family: "Gill Sans", sans-serif;;
+}
+
+
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+  color: antiquewhite;
+}
+
+    img.w3-round-large {
+        border-radius: 60px;
+      }
+
+.button{font-size: 25px;}
+
+
+  .button:hover {
+      background-color:#002ead;
+      transition: 0.7s;
+  }
+
+  .button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+}
+
+h2.type {
+  border: 4px solid ;
+  padding:20px;
+  border-color: rgb(35, 35, 133);
+}
+
+.content {
+	background-color: #704d97;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: rgb(254, 251, 251);
+	font-size: 1.6em;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 70%;
+}
+
+.text:active{
+  color: #FF00FF;
+}
+
+div.sticky{ position: -webkit-sticky;
+  position: sticky;}
+
+input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #f8e7ff;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: cursive;
+}
+
+input[type=text]:focus {
+  border: 4px solid rgb(0, 0, 0);
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f8e7ff;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: cursive;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(40, 11, 59);
+}
+
+li {
+  float: center;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: cursive;
+
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color:  #704d97;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+      </style>
+</head>
+
+
+
+<body>
+    <div class="font">
+
+    <form class="formm" name="myform" method="post" onsubmit= "return validateform() ">
+    <center>
+        <img src="https://i2.paste.pics/699aa1c18e5f57e148733f01cb2e775f.png" width="991" height="205" alt="Screenshot"   width="1500" height="400">
+    <h1 class="font1">Custom Tshirt Order</h1>
+    <br>
+
+
+    <ul>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+          <a href="#type">Type</a>
+        <a href="#size">Size</a>
+        <a href="#colour">Colours</a>
+        </div>
+      </li>
+    </ul>
+
+
+
+
+
+    <div class="content">
+    <h2 class="type"  id="type">Choose your Shirt Type</h2>
+    <input type="radio">
+    <label for="Round Neck"> Standard</label><br>
+
+    <input type="radio" id="Polo Neck" name="Polo Neck">
+    <label for="Polo Neck"> Polo Neck</label><br>
+
+    <input type="radio" id="V-Neck" name="V-Neck">
+    <label for="V-Neck"> V-Neck</label><br>
+
+    <input type="radio" id="V-Neck" name="V-Neck">
+    <label for="Turtle Neck"> V-Neck</label><br>
+
+    <input type="radio" id="V-Neck" name="V-Neck">
+    <label for="Full Sleeves"> V-Neck</label><br>
+    <br>
+
+
+    <label for="tagline">Tagline</label><br>
+    <input type="text" class="text" id="taglibe" name="tagline" placeholder="Enter Tshirt Tagline"><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+  <select name="Quantity" id="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">5+</option>
+    </select>
+    <br><br>
+
+
+
+    <h2 class="type" id="size">Choose your Shirt Size</h2>
+    <div class="border1">
+    <label for="size">Size:</label>
+  <select name="size" id="size">
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+  </select>
+</div>
+  <br><br>
+
+
+
+  <h2 class="type" id="colour">Choose your Shirt Colour</h2>
+  <label for="colour">Colour:</label>
+  <select name="colour" id="colour">
+    <option value="White">White</option>
+    <option value="Blue">Blue</option>
+    <option value="Black">Black</option>
+    <option value="Red">Red</option>
+  </select>
+  <br><br>
+
+
+
+  <h2 class="type">Customer Details</h2>
+  <label for="fname">First Name:   </label>
+  <input type="text" id="fname" name="fname" placeholder="Enter First Name.."><br><br>
+
+  <label for="lname">Last Name:   </label>
+  <input type="text" id="lname" name="lname" placeholder="Enter Last Name.."><br><br>
+
+  <label for="mobile">Contact No:    </label>
+  <input type="text" id="mobile" name="mobile" placeholder="Enter Contact No."><br><br>
+
+  <label for="email">Email ID:   </label>
+  <input type="text" id="email" placeholder="your_email@gmail.com" name="email"><br><br>
+
+  <label for="addr">Shipping Address    </label>
+  <input type="text" id="addr" name="addr" size="100" maxlength="100" placeholder="Enter Delivery Address"><br><br>
+
+  <label for="City">City:    </label>
+  <input type="text" id="city" name="City"><br><br>
+
+  <label for="code">Pin Code:    </label>
+  <input type="text" id="code" name="Pincode"><br><br>
+
+  <label for="State">State:    </label>
+  <input type="text" id="State" name="State"><br><br>
+
+</div>
+
+
+    <input type="submit" class="button" value="Submit">
+
+
+
+</form>
+</center>
+</div>
+</body>
+<script>
+    let date = document.getElementById("date");
+    let time = document.getElementById("time");
+    // creating the date object and getting the date and time
+    let newDate = new Date();
+    let year = newDate.getFullYear();
+    let month = newDate.getMonth();
+    let todaySDate = newDate.getDate();
+    let hours = newDate.getHours();
+    let minutes = newDate.getMinutes();
+    let seconds = newDate.getSeconds();
+    date.innerHTML = " " + todaySDate + "/ " + month + "/ " + year;
+    time.innerHTML = hours + ": " + minutes + ": " + seconds;
+
+
+    function validateform() {
+    var tagline=document.myform.tagline.value;
+    var quantity=document.myform.Quantity.value;
+    var fname=document.myform.fname.value;
+    var lname=document.myform.lname.value;
+    var addr=document.myform.addr.value;
+    var City=document.myform.City.value;
+    var code=document.myform.code.value;
+    var size=document.myform.size.selectedIndex;
+    var State=document.myform.State.value;
+
+    var mobile = /^\d{10}$/;
+    var mob = document.forms["myform"]["mobile"].value;
+
+    var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var email=document.forms["myform"]["email"].value;
+
+
+
+
+    if (tagline==""){
+    alert("Tagline of the t-shirt can't be blank");
+    return false;
+    }
+    else if (quantity==""){
+    alert("Quantity of the t-shirt can't be blank");
+    return false;
+    }
+    else if (fname==""){
+    alert("First name field can't be blank");
+    return false;
+    }
+    else if (lname==""){
+    alert("Last name field can't be blank");
+    return false;
+    }
+
+    else if (!mob.match(mobile)){
+    alert("Enter a 10 digit mobile number");
+    return false;
+    }
+
+    else if (addr==""){
+    alert("Address field can't be blank");
+    return false;
+    }
+    else if (city==""){
+    alert("City field can't be blank");
+    return false;
+    }
+    else if (code==""){
+    alert("Pincode field can't be blank");
+    return false;
+    }
+    else if (size==""){
+    alert("Please select a size");
+    return false;
+    }
+    else if (State==""){
+    alert("Please select a State");
+    return false;
+    }
+
+    else if (!email.match(mail)){
+    alert("Please enter a valid email");
+    return false;
+    }
+    else window.print();
+    }
+    </script>
+</html>
